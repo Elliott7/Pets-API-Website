@@ -1,0 +1,46 @@
+.hero {
+    height: 400px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    gap: 20px
+}
+
+.hero div{
+    height: 80%;
+    width: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0;
+}
+
+.text {
+    width: 80%;
+}
+
+.pictureContainer{
+    flex: 0 1 400px;
+    max-width: 400px;
+    justify-content: center;
+    justify-self: center;
+}
+
+.picture{
+    flex: 0 1 auto;
+    border-radius: 20%;
+    padding: 20px;
+}
+
+@media (max-width: 900px) {
+    .hero{
+        flex-direction: column;
+        height: 800px;
+    }
+    .hero div{
+        margin-top:25px;
+        width: 90vw;
+    }
+}
