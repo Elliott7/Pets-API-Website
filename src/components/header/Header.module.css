@@ -1,0 +1,22 @@
+header{
+    height: 200px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.logo{
+    margin-top: 30px;
+    min-height: 150px;
+    border-radius: 50%;
+}
+
+
+@media (max-width: 600px) {
+    header{
+        justify-content: space-between;
+    }
+    .logo{
+        position: relative;
+        left: 30px;
+    }
+}
