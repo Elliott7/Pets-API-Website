@@ -66,18 +66,25 @@ const catData = {
 
 function App() {
     const [theme, setTheme] = useState(dogData)
+    const [url, setUrl] = useState('')
 
     const dogTheme = () => {
+        setUrl('')
         setTheme(dogData)
     }
     const catTheme = () => {
+        setUrl('')
         setTheme(catData)
     }
+    const onGetApi = (response) => {
+        setUrl(response)
+    }
+
     return (
       <div className="App">
           <Header theme={theme} changeToDog={dogTheme} changeToCat={catTheme} />
-          <Hero theme={theme} />
-          <Carousel theme={theme}/>
+          <Hero theme={theme} onApiSave={onGetApi} />
+          <Carousel theme={theme} url={url}/>
           <Quote theme={theme} />
           <CallToAction theme={theme}/>
           <Footer theme={theme} />

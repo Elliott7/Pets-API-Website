@@ -1,9 +1,13 @@
-import React from 'react'
+import React, {useState} from 'react'
 import style from "./Carousel.module.css"
 import '../shared-properties.css'
 
 function Carousel(props){
-
+    // const [url, setUrl] = useState('')
+    let rotatingImages =
+        <div className={style.imageContainers}>
+            <img src={props.url} className={props.theme.border} alt="Changing pictures of cats"/>
+        </div>
     const displayPictures = props.theme.carouselPictures.map((image) => {
         return(
             <div className={style.imageContainers}>
@@ -19,8 +23,7 @@ function Carousel(props){
                 Prepare for cuteness overload
             </h2>
             <div className={style.carousel}>
-                {displayPictures}
-
+                {props.url? rotatingImages: displayPictures}
             </div>
         </section>
     )
