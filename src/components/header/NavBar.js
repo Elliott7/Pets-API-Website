@@ -10,8 +10,8 @@ Mobile responsive - renders a dropdown list when width gets too small
 
 function NavBar(props){
     return(
-        <nav className={style.dropdown}>
-            <img src="images/ham.png" className={style.hamburger} alt="doge"/>
+        <nav className={`${style.dropdown} ${props.className} ${props.bgc}`}>
+            <img src="images/ham.png" className={style.hamburger} alt="hamburger icon"/>
             <ul className={style.dropdownContent}>
                 {props.children}
             </ul>

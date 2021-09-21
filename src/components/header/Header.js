@@ -10,15 +10,15 @@ function Header(props){
     }
     return(
         <header className={`${props.theme.themeBackground}`}>
-            {/*<img src="/images/logo4.png" className={style.logo} alt="Doge"/>*/}
             <img src={props.theme.logoLocation[0]} className={style.logo} alt={props.theme.logoLocation[1]}/>
-            <NavBar>
+            <NavBar className="secondary-text" bgc={props.theme.themeBackground}>
                 <button onClick={props.changeToDog}>Doge</button>
                 <button onClick={props.changeToCat}>Kitteh</button>
-                <li><a href="#">Option 1</a></li>
-                <li><a href="#">Option3</a></li>
-                <li>Option 4</li>
-                <button onClick={tes}>Option 5</button>
+                <button>Random?</button>
+                {/*<li><a href="#">Option 1</a></li>*/}
+                {/*<li><a href="#">Option3</a></li>*/}
+                {/*<li>Option 4</li>*/}
+                {/*<button onClick={tes}>Option 5</button>*/}
             </NavBar>
         </header>
     )

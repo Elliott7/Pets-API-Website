@@ -1,0 +1,62 @@
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/********** Background Colours **********/
+
+.dark-background{
+    background-color: #1f2937;
+}
+.dark-background-secondary{
+    background-color: #3882f6;
+}
+.light-background{
+    background-color: #611f2c;
+}
+.light-background-secondary{
+    background-color: #ed4c6c;
+}
+.dark-secondary-border {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+    border: 2px solid #3882F6;
+    border-radius: 10px;
+}
+.light-secondary-border {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+    border: 2px solid #ed4c6c;
+    border-radius: 10px;
+}
+
+/********** Text Sizes **********/
+
+.text-size-1{
+    font-size: 18px;
+}
+.text-size-2{
+    font-size: 24px;
+}
+.text-size-3{
+    font-size: 36px;
+    font-weight: 700;
+}
+.text-size-4{
+    font-size: 48px;
+    font-weight: 1000;
+}
+
+/********** Font Colours **********/
+
+.headings-text{
+    color: #F9FAF8;
+}
+.secondary-text{
+    color: #E5E7EB;
+}
+.dark-text{
+    color: #1F2937;
+}
+
+.light-text{
+    color: #932f43;
+}
