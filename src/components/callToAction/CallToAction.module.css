@@ -1,0 +1,22 @@
+.mainContainer{
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    height: 120px;
+    width: 80%;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: white;
+    padding: 10px;
+}
+.container div p{
+    margin: 10px;
+}
+.button {
+    border: 2px solid white;
+}
