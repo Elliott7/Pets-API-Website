@@ -32,7 +32,8 @@ const dogData = {
     "quote": " Woof Woof Woof Woof Woof Woof Woof Woof Woof Woof Woof Woof",
     "animal": "Doge",
     "textColor": 'dark-text',
-    "copy": "Copyright Shiba Corp Pty Ltd"
+    "copy": "Copyright Shiba Corp Pty Ltd",
+    "slogan": "Dogs are the best"
 }
 
 const catData = {
@@ -60,13 +61,16 @@ const catData = {
     "quote": "If I fits I sits",
     "animal": "Kitteh",
     "textColor": 'light-text',
-    "copy": "Copyright Emperor Kitty Pty Ltd"
+    "copy": "Copyright Emperor Kitty Pty Ltd",
+    "slogan": "Bow down to your overlords"
 }
 
 
 function App() {
     const [theme, setTheme] = useState(dogData)
     const [url, setUrl] = useState('')
+
+    let dogAPILInks = []
 
     const dogTheme = () => {
         setUrl('')
@@ -79,11 +83,15 @@ function App() {
     const onGetApi = (response) => {
         setUrl(response)
     }
+    const onDogLoadApi = (response) => {
+        dogAPILInks = [...response]
+        console.log(dogAPILInks)
+    }
 
     return (
       <div className="App">
           <Header theme={theme} changeToDog={dogTheme} changeToCat={catTheme} />
-          <Hero theme={theme} onApiSave={onGetApi} />
+          <Hero theme={theme} onApiSave={onGetApi} onDogLoadApi={onDogLoadApi} />
           <Carousel theme={theme} url={url}/>
           <Quote theme={theme} />
           <CallToAction theme={theme}/>

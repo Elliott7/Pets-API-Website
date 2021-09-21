@@ -1,0 +1,106 @@
+.wrapper{
+    padding: 10px;
+    margin: 0;
+    display: flex;
+    text-transform: uppercase;
+    flex-direction: row;
+}
+.wordBox{
+    display: flex;
+}
+.wrapper li{
+    list-style: none;
+    /*font-size: 2em;*/
+    letter-spacing: 15px;
+    font-family: 'Zen Tokyo Zoo', cursive;
+
+}
+.neonBlue{
+    color:#262626;
+    animation: blue-animate 5s infinite linear;
+}
+.neonPink{
+    color: #611f2c;
+    animation: pink-animate 5s infinite linear;
+}
+
+.space{
+    width: 2em;
+}
+
+@keyframes blue-animate{
+    0%{
+        color:#262626;
+        text-shadow:none;
+    }
+    20% {
+        color: deepskyblue;
+        text-shadow: 0 0 7px #262626, 0 0 20px deepskyblue;
+    }
+    30%{
+        color:#262626;
+        text-shadow:none;
+    }
+    40% {
+        color: deepskyblue;
+        text-shadow: 0 0 7px #262626, 0 0 20px deepskyblue;
+    }
+    50%{
+        color:#262626;
+        text-shadow:none;
+    }
+    60%{
+        color:#262626;
+        text-shadow:none;
+    }
+    75% {
+        color: deepskyblue;
+        text-shadow: 0 0 7px #262626, 0 0 20px deepskyblue;
+    }
+    100%{
+        color:#262626;
+        text-shadow:none;
+    }
+}
+
+
+@keyframes pink-animate{
+    0%{
+        color: #6b2230;
+        text-shadow:none;
+    }
+    20% {
+        color: #FF6EC7;
+        text-shadow: 0 0 7px #6b2230, 0 0 20px #FF6EC7;
+    }
+    30%{
+        color: #6b2230;
+        text-shadow:none;
+    }
+    40% {
+        color: #FF6EC7;
+        text-shadow: 0 0 7px #6b2230, 0 0 20px #FF6EC7;
+    }
+    50%{
+        color:#6b2230;
+        text-shadow:none;
+    }
+    60%{
+        color:#6b2230;
+        text-shadow:none;
+    }
+    75% {
+        color: #FF6EC7;
+        text-shadow: 0 0 7px #6b2230, 0 0 20px #FF6EC7;
+    }
+    100%{
+        color:#6b2230;
+        text-shadow:none;
+    }
+}
+
+@media (max-width: 900px){
+    .wrapper{
+        flex-direction: column;
+    }
+}

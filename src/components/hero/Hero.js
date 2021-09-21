@@ -9,27 +9,51 @@ myHeaders.append("Content-Type", "application/json");
 myHeaders.append("x-api-key", "api_key=b31528df-bb42-4c16-8b30-10c31335f7aa");
 
 let requestOptions = {
+    "limit": 5,
     method: 'GET',
     headers: myHeaders,
-    redirect: "follow"
+    redirect: "follow",
 }
 
 function Hero(props){
     // Create function to pass newPic to carousel
     // const [newPic, setNewPic] = useState('#')
+
+    // Currently both API calls work
+    // const dogAPI = () => {
+    //     fetch("https://dog.ceo/api/breeds/image/random")
+    //         .then(response => response.text())
+    //         .then(response => props.onApiSave(JSON.parse(response).message))
+    //         .catch(error => console.log('error', error));
+    // }
+    // const catAPI = () => {
+    //     fetch(catAPIURL, requestOptions)
+    //         .then(response => response.text())
+    //         .then(response => props.onApiSave(JSON.parse(response)[0].url))
+    //         .catch(error => console.log('error', error));
+    // }
+
+
+    /*
+     Change function to run on component mount - Change button click to pop
+     item from array and update state. Have multiple images pre-loaded so
+     that they can be cycled through quickly and efficiently.
+    */
     const dogAPI = () => {
-        fetch("https://dog.ceo/api/breeds/image/random")
+        fetch("https://dog.ceo/api/breed/shiba/images/random/10")
             .then(response => response.text())
-            .then(response => props.onApiSave(JSON.parse(response).message))
+            .then(response => props.onDogLoadApi(JSON.parse(response).message))
             .catch(error => console.log('error', error));
     }
 
     const catAPI = () => {
-        fetch(catAPIURL, requestOptions)
+        fetch(catAPIURL, [requestOptions, {"limit": '5'}])
             .then(response => response.text())
-            .then(response => props.onApiSave(JSON.parse(response)[0].url))
+            .then(response => console.log(response))
+            // .then(response => props.onApiSave(JSON.parse(response)[0].url))
             .catch(error => console.log('error', error));
     }
+
 
     const clickHandler = (event) => {
         console.log("test")
@@ -39,7 +63,7 @@ function Hero(props){
             catAPI()
         }
     }
-    
+
     return(
         <section className={`${style.hero} ${props.theme.themeBackground}`}>
             <div>
