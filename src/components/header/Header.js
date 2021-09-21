@@ -9,8 +9,10 @@ function Header(props){
         console.log('test')
     }
     return(
-        <header className={`${props.theme.themeBackground}`}>
-            <img src={props.theme.logoLocation[0]} className={style.logo} alt={props.theme.logoLocation[1]}/>
+        <header id="header" className={`${props.theme.themeBackground}`}>
+            <a className={style.link} href="#footer">
+                <img src={props.theme.logoLocation[0]} className={style.logo} alt={props.theme.logoLocation[1]}/>
+            </a>
             <NavBar className="secondary-text" bgc={props.theme.themeBackground}>
                 <button onClick={props.changeToDog}>Doge</button>
                 <button onClick={props.changeToCat}>Kitteh</button>

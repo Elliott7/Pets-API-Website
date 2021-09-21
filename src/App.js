@@ -4,12 +4,15 @@ import Header from "./components/header/Header";
 import Hero from "./components/hero/Hero";
 import Carousel from "./components/carousel/Carousel";
 import Quote from "./components/quote/Quote";
+import CallToAction from "./components/callToAction/CallToAction";
+import Footer from "./components/footer/Footer";
 
 const dogData = {
     "themeBackground": "dark-background",
     "secondaryBg":"dark-background-secondary",
     "border": "dark-secondary-border",
-    "logoLocation": ["/images/logo4.png", "A happy Shibu Inu"],
+    "logoLocation": ["/images/logo4.png", "A happy Shibu Inu",
+        "/images/logo3.png", "Cartoon Shibu Inu in a suit"],
     "heroPicture": ["/images/happyshib.png", "Two smiling Shibu Inu dogs"],
     "carouselPictures":[
         {'src':"/images/nicepupper.jpeg",
@@ -27,14 +30,17 @@ const dogData = {
     ],
     "footerLogoLocation": "",
     "quote": " Woof Woof Woof Woof Woof Woof Woof Woof Woof Woof Woof Woof",
-    "animal": "Doge"
+    "animal": "Doge",
+    "textColor": 'dark-text',
+    "copy": "Copyright Shiba Corp Pty Ltd"
 }
 
 const catData = {
     "themeBackground": "light-background",
     "secondaryBg": "light-background-secondary",
     "border": "light-secondary-border",
-    "logoLocation": ["/images/catlogo1.jpeg", "A beautiful Ragdoll cat"],
+    "logoLocation": ["/images/catlogo1.jpeg", "A beautiful Ragdoll cat",
+        "/images/overhangingcat.png", "Overhanging Kitten logo"],
     "heroPicture": ["/images/catlogo2.jpeg", "cute"],
     "carouselPictures":[
         {'src':"/images/cutecat5.jpeg",
@@ -52,7 +58,9 @@ const catData = {
     ],
     "footerLogoLocation": "",
     "quote": "If I fits I sits",
-    "animal": "Kitteh"
+    "animal": "Kitteh",
+    "textColor": 'light-text',
+    "copy": "Copyright Emperor Kitty Pty Ltd"
 }
 
 
@@ -71,6 +79,8 @@ function App() {
           <Hero theme={theme} />
           <Carousel theme={theme}/>
           <Quote theme={theme} />
+          <CallToAction theme={theme}/>
+          <Footer theme={theme} />
       </div>
     );
 }

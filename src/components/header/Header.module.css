@@ -2,14 +2,19 @@ header{
     height: 200px;
     display: flex;
     justify-content: space-around;
+    padding-top: 20px;
 }
-
+.link{
+    width: 200px;
+}
 .logo{
-    margin-top: 30px;
-    min-height: 150px;
+    height: 100%;
     border-radius: 50%;
+    transition: 0.2s;
 }
-
+.logo:hover {
+    transform: scale(1.05);
+}
 
 @media (max-width: 600px) {
     header{

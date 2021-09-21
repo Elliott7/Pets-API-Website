@@ -11,7 +11,7 @@ function CallToAction(props){
                     <p className='secondary-text text-size-1'>Of course you do!</p>
                 </div>
 
-                <Button className={`${props.theme.secondaryBg} ${style.button}`} >Click For More</Button>
+                <Button className={`${props.theme.secondaryBg} ${style.button}`} >More Quotes!</Button>
             </div>
 
         </section>
