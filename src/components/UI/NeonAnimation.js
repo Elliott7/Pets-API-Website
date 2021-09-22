@@ -1,35 +1,3 @@
-// import React from 'react'
-// import style from "./NeonAnimation.module.css"
-//
-// function NeonAnimation(props){
-//     if (!props.children) {
-//         return null
-//     }
-//     console.log(props.children)
-//     let splitWords = props.children.split('')
-//     console.log(splitWords)
-//     let output = splitWords.map((letter) => {
-//         if (letter === " "){ return <li className={style.space}> </li>}
-//         else {
-//             return(
-//                 <li style={{"animation-delay": `${Math.random()*2}s`}} className="text-size-2">{letter}</li>
-//             )
-//         }
-//     })
-//
-//     return(
-//         <div className={props.className}>
-//             <ul className={style.wrapper}>
-//                 {output}
-//             </ul>
-//         </div>
-//     )
-// }
-//
-// export default NeonAnimation
-
-
-
 import React from 'react'
 import style from "./NeonAnimation.module.css"
 
@@ -37,22 +5,37 @@ function NeonAnimation(props){
     if (!props.children) {
         return null
     }
-    //"animation-delay" or animationDelay
+    let neonColor
+    if (props.theme === "Kitteh"){
+        neonColor = style.neonPink
+    } else if (props.theme === "Doge"){
+        neonColor = style.neonBlue
+    } else {
+        neonColor = style.neonGreen
+    }
+
+    /*
+    Splits the text into individual arrays containing a word, then those words are each split into their
+    own array of letters. This is done so that the words will all display on one line whilst the
+     page width is large enough. Once the page becomes too small, each array of letters (an individual
+     word) will then wrap onto a new line rather than displaying each letter on its own row.
+    */
     let splitWords = props.children.split(' ')
     let output = []
     splitWords.map((word) => {
         let splitLetters = word.split("")
         let animatedWord = splitLetters.map((letter) => {
             return(
-                <li style={{"animation-delay": `${Math.random()*2}s`}}
-                    className={`text-size-2 ${props.theme? style.neonPink: style.neonBlue}`}>
+                <li style={{"animationDelay": `${Math.random()*2}s`}}
+                    className={`text-size-2 ${neonColor}`}
+                    key={Math.random()}>
                     {letter}
                 </li>
             )
         })
-        animatedWord.push(<li className={style.space}> </li>)
+        animatedWord.push(<li key={Math.random()} className={style.space}> </li>)
         output.push(
-            <div className={style.wordBox}>
+            <div key={Math.random()} className={style.wordBox}>
                 {animatedWord}
             </div>
             )})

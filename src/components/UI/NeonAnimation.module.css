@@ -1,3 +1,13 @@
+:root{
+    --neon-blue: deepskyblue;
+    --dark-blue: #262626;
+    --neon-pink: #FF6EC7;
+    --dark-red: #6b2230;
+    --neon-green: #0eff00;
+    --dark-green:  #28501e;
+    --current-neon: var(--neon-blue);
+    --current-dark: var(--dark-blue);
+}
 .wrapper{
     padding: 10px;
     margin: 0;
@@ -15,86 +25,64 @@
     font-family: 'Zen Tokyo Zoo', cursive;
 
 }
+
+.neonBlue,
+.neonPink,
+.neonGreen{
+    animation: animate 5s infinite linear;
+}
+
 .neonBlue{
     color:#262626;
-    animation: blue-animate 5s infinite linear;
+    --current-neon: var(--neon-blue);
+    --current-dark: var(--dark-blue);
 }
 .neonPink{
     color: #611f2c;
-    animation: pink-animate 5s infinite linear;
+    --current-neon: var(--neon-pink);
+    --current-dark: var(--dark-red);
+}
+.neonGreen{
+    color: #28501e;
+    --current-neon: var(--neon-green);
+    --current-dark: var(--dark-green);
 }
 
 .space{
     width: 2em;
 }
 
-@keyframes blue-animate{
+@keyframes animate{
     0%{
-        color:#262626;
+        color: var(--current-dark);
         text-shadow:none;
     }
     20% {
-        color: deepskyblue;
-        text-shadow: 0 0 7px #262626, 0 0 20px deepskyblue;
+        color: var(--current-neon);
+        text-shadow: 0 0 7px var(--current-dark), 0 0 20px var(--current-neon);
     }
     30%{
-        color:#262626;
+        color:var(--current-dark);
         text-shadow:none;
     }
     40% {
-        color: deepskyblue;
-        text-shadow: 0 0 7px #262626, 0 0 20px deepskyblue;
+        color: var(--current-neon);
+        text-shadow: 0 0 7px var(--current-dark), 0 0 20px var(--current-neon);
     }
     50%{
-        color:#262626;
+        color:var(--current-dark);
         text-shadow:none;
     }
     60%{
-        color:#262626;
+        color:var(--current-dark);
         text-shadow:none;
     }
     75% {
-        color: deepskyblue;
-        text-shadow: 0 0 7px #262626, 0 0 20px deepskyblue;
+        color: var(--current-neon);
+        text-shadow: 0 0 7px var(--current-dark), 0 0 20px var(--current-neon);
     }
     100%{
-        color:#262626;
-        text-shadow:none;
-    }
-}
-
-
-@keyframes pink-animate{
-    0%{
-        color: #6b2230;
-        text-shadow:none;
-    }
-    20% {
-        color: #FF6EC7;
-        text-shadow: 0 0 7px #6b2230, 0 0 20px #FF6EC7;
-    }
-    30%{
-        color: #6b2230;
-        text-shadow:none;
-    }
-    40% {
-        color: #FF6EC7;
-        text-shadow: 0 0 7px #6b2230, 0 0 20px #FF6EC7;
-    }
-    50%{
-        color:#6b2230;
-        text-shadow:none;
-    }
-    60%{
-        color:#6b2230;
-        text-shadow:none;
-    }
-    75% {
-        color: #FF6EC7;
-        text-shadow: 0 0 7px #6b2230, 0 0 20px #FF6EC7;
-    }
-    100%{
-        color:#6b2230;
+        color:var(--current-dark);
         text-shadow:none;
     }
 }
