@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import './App.css';
 import Header from "./components/header/Header";
 import Hero from "./components/hero/Hero";
@@ -7,14 +7,29 @@ import Quote from "./components/quote/Quote";
 import CallToAction from "./components/callToAction/CallToAction";
 import Footer from "./components/footer/Footer";
 import {catData, dogData, birdData} from "./components/Data";
-
+import {dogAPI, catAPI} from "./components/ApiCalls";
 
 function App() {
     const [theme, setTheme] = useState(dogData)
     const [url, setUrl] = useState('')
     const randThemes = [birdData]
 
-    let dogAPILInks = []
+    let dogAPILinks = []
+    let catAPILinks = []
+
+    function updateDog(response){
+        dogAPILinks.push(...response)
+    }
+    function updateCat(response){
+        catAPILinks.push(...response)
+
+    }
+
+    useEffect(() => {
+        dogAPI(updateDog)
+        catAPI(updateCat)
+        setTimeout(() => console.log(dogAPILinks, catAPILinks), 2000)
+    }, [])
 
     const dogTheme = () => {
         setUrl('')
@@ -33,8 +48,8 @@ function App() {
         setUrl(response)
     }
     const onDogLoadApi = (response) => {
-        dogAPILInks = [...response]
-        console.log(dogAPILInks)
+        dogAPILinks = [...response]
+        console.log(dogAPILinks)
     }
 
     return (

@@ -3,23 +3,23 @@ import style from './Hero.module.css'
 import '../shared-properties.css'
 import Button from "../UI/Button";
 
-const catAPIURL = "https://api.thecatapi.com/v1/images/search?format=json"
-let myHeaders = new Headers();
-myHeaders.append("Content-Type", "application/json");
-myHeaders.append("x-api-key", "api_key=b31528df-bb42-4c16-8b30-10c31335f7aa");
-
-let requestOptions = {
-    "limit": 5,
-    method: 'GET',
-    headers: myHeaders,
-    redirect: "follow",
-}
+// const catAPIURL = "https://api.thecatapi.com/v1/images/search?limit=10&format=json"
+// let myHeaders = new Headers();
+// myHeaders.append("Content-Type", "application/json");
+// myHeaders.append("x-api-key", "api_key=b31528df-bb42-4c16-8b30-10c31335f7aa");
+//
+// let requestOptions = {
+//     method: 'GET',
+//     headers: myHeaders,
+//     redirect: "follow",
+// }
 
 function Hero(props){
     // Create function to pass newPic to carousel
     // const [newPic, setNewPic] = useState('#')
 
     // Currently both API calls work
+    // Both APIs make a single call and updates the state to reflect the URL
     // const dogAPI = () => {
     //     fetch("https://dog.ceo/api/breeds/image/random")
     //         .then(response => response.text())
@@ -38,29 +38,35 @@ function Hero(props){
      Change function to run on component mount - Change button click to pop
      item from array and update state. Have multiple images pre-loaded so
      that they can be cycled through quickly and efficiently.
-    */
-    const dogAPI = () => {
-        fetch("https://dog.ceo/api/breed/shiba/images/random/10")
-            .then(response => response.text())
-            .then(response => props.onDogLoadApi(JSON.parse(response).message))
-            .catch(error => console.log('error', error));
-    }
-
-    const catAPI = () => {
-        fetch(catAPIURL, [requestOptions, {"limit": '5'}])
-            .then(response => response.text())
-            .then(response => console.log(response))
-            // .then(response => props.onApiSave(JSON.parse(response)[0].url))
-            .catch(error => console.log('error', error));
-    }
+    // */
+    // const dogAPI = () => {
+    //     fetch("https://dog.ceo/api/breed/shiba/images/random/10")
+    //         .then(response => response.text())
+    //         .then(response => props.onDogLoadApi(JSON.parse(response).message))
+    //         .catch(error => console.log('error', error));
+    // }
+    // //
+    // const catAPI = () => {
+    //     // fetch(catAPIURL, [requestOptions])
+    //     let arr = []
+    //     fetch(catAPIURL, requestOptions )
+    //         .then(response => response.json())
+    //         // .then(response => (response.map((item) => arr.push(item.url))))
+    //         // .then(response => console.log(arr))
+    //         // .then(response => updateFunc(response))
+    //         // .then(response => response.filter((item) =>{return (item.url)}))
+    //         // .then(response => console.log(response))
+    //         .catch(error => console.log('error', error));
+    // }
 
 
     const clickHandler = (event) => {
-        console.log("test")
         if (props.theme.animal === "Doge"){
-            dogAPI()
+            console.log("Update to change dog pictures")
+            // dogAPI()
         } else if (props.theme.animal === "Kitteh"){
-            catAPI()
+            console.log("Update to change cat pictures")
+            // catAPI()
         }
     }
 
