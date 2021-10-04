@@ -15,6 +15,8 @@ function App() {
     const [dogAPILinks, setDogAPILinks] = useState([])
     const [catAPILinks, setCatAPILinks] = useState([])
     const randThemes = [birdData]
+    const [quote, setQuote] = useState(theme.quote[0])
+    const [count, setCount] = useState(1)
 
     useEffect(() => {
         loadDogAPI()
@@ -26,7 +28,6 @@ function App() {
     let loadDogAPI = () => {
         dogAPI(loadDogLinks)
     }
-
 
 
     // Sets link state and preloads them on component mount so user doesn't need to wait for imgs to load
@@ -54,15 +55,21 @@ function App() {
     const dogTheme = () => {
         setUrl('')
         setTheme(dogData)
+        setQuote(dogData.quote[0])
+        setCount(1)
     }
     const catTheme = () => {
         setUrl('')
         setTheme(catData)
+        setQuote(catData.quote[0])
+        setCount(1)
     }
     const randomTheme = () => {
         setUrl('')
         let ind = Math.floor(Math.random()*randThemes.length)
         setTheme(randThemes[ind])
+        setQuote(randThemes[ind].quote[0])
+        setCount(1)
     }
 
     const loadDogPics = () => {
@@ -83,13 +90,25 @@ function App() {
         if (catAPILinks.length == 3){loadCatAPI()}
     }
 
+    const updateQuote = () => {
+        if (count >= theme.quote.length-1) {
+            setQuote(theme.quote[count])
+            setCount(0)
+        } else {
+            setQuote(theme.quote[count])
+            setCount(count + 1)
+        }
+        console.log(count)
+    }
+
+
     return (
       <div className="App">
           <Header theme={theme} changeToDog={dogTheme} changeToCat={catTheme} random={randomTheme} />
           <Hero theme={theme} loadCatPics={loadCatPics} loadDogPics={loadDogPics} />
           <Carousel theme={theme} url={url}/>
-          <Quote theme={theme} />
-          <CallToAction theme={theme}/>
+          <Quote theme={theme} quote={quote} />
+          <CallToAction theme={theme} updateQuote={updateQuote}/>
           <Footer theme={theme} />
       </div>
     );

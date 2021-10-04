@@ -2,22 +2,7 @@ import React from 'react'
 import style from './CallToAction.module.css'
 import Button from "../UI/Button"
 
-const catAPIURL = "https://api.thecatapi.com/v1/images/search?format=json"
-let myHeaders = new Headers();
-myHeaders.append("Content-Type", "application/json");
-myHeaders.append("x-api-key", "api_key=b31528df-bb42-4c16-8b30-10c31335f7aa");
-
-let requestOptions = {
-    method: 'GET',
-    headers: myHeaders,
-    redirect: "follow"
-}
-
 function CallToAction(props){
-    const clickHandler = (event) => {
-        console.log('test')
-    }
-
     return(
         <section className={`${style.mainContainer}`}>
             <div className={`${style.container} ${props.theme.secondaryBg}`}>
@@ -26,7 +11,7 @@ function CallToAction(props){
                     <p className='secondary-text text-size-1'>Of course you do!</p>
                 </div>
                 <Button className={`${props.theme.secondaryBg} ${style.button}`}
-                        onClick={clickHandler}
+                        onClick={props.updateQuote}
                 >More Quotes!</Button>
             </div>
 
