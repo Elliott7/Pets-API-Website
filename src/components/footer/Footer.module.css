@@ -1,13 +1,16 @@
 .main{
+    position: relative;
     display: flex;
     justify-content: space-between;
     padding: 0 40px;
     align-items: center;
+    min-height: 100px;
 }
 
 .logo2{
-    position: relative;
-    top: -80px
+    position: absolute;
+    top: -80px;
+    right: 20px;
 }
 .logo,
 .logo2{

@@ -63,9 +63,11 @@ function Hero(props){
     const clickHandler = (event) => {
         if (props.theme.animal === "Doge"){
             console.log("Update to change dog pictures")
+            props.loadDogPics()
             // dogAPI()
         } else if (props.theme.animal === "Kitteh"){
             console.log("Update to change cat pictures")
+            props.loadCatPics()
             // catAPI()
         }
     }

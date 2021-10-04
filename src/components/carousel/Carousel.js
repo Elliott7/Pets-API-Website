@@ -5,12 +5,14 @@ import '../shared-properties.css'
 function Carousel(props){
     // const [url, setUrl] = useState('')
     let rotatingImages =
-        <div className={style.imageContainers}>
-            <img src={props.url} className={props.theme.border} alt="Changing pictures of cats"/>
+        <div className={`${style.imageContainers} ${style.rotating}`}>
+            <img src={props.url}
+                 className={`${props.theme.border} `}
+                 alt="Changing pictures of animals"/>
         </div>
     const displayPictures = props.theme.carouselPictures.map((image) => {
         return(
-            <div className={style.imageContainers}>
+            <div className={style.imageContainers} key={Math.random()}>
                 <img src={image.src} alt={image.alt} className={props.theme.border}/>
                 <div className={`${props.theme.textColor} text-size-1`}>{image.desc}</div>
             </div>

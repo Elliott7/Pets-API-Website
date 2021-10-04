@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React from 'react'
 import style from './CallToAction.module.css'
 import Button from "../UI/Button"
 

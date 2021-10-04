@@ -32,6 +32,10 @@
     border-radius: 20px;
 }
 
+.rotating {
+    min-height: 400px;
+}
+
 @media (max-width: 1500px) {
     .carousel {
         flex-wrap: wrap;

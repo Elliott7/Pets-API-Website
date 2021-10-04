@@ -17,6 +17,12 @@ img {
 .light-background-secondary{
     background-color: #ed4c6c;
 }
+.green-background{
+    background-color: #28501e;
+}
+.green-background-secondary {
+    background-color: #0ec800;
+}
 .dark-secondary-border {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
     border: 2px solid #3882F6;
@@ -27,6 +33,12 @@ img {
     border: 2px solid #ed4c6c;
     border-radius: 10px;
 }
+.green-secondary-border {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+    border: 2px solid #0ec800;
+    border-radius: 10px;
+}
+/*237 76 108*/
 
 /********** Font Colours **********/
 
@@ -41,6 +53,9 @@ img {
 }
 .light-text{
     color: #932f43;
+}
+.green-text{
+    color: #39722b
 }
 
 /********** Text Sizes **********/

@@ -51,6 +51,13 @@
 .space{
     width: 2em;
 }
+.increaseDuration{
+    animation-duration: 15s;
+}
+.animationOff{
+    animation: none;
+    color: var(--current-neon);
+}
 
 @keyframes animate{
     0%{

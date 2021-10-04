@@ -16,6 +16,41 @@ header{
     transform: scale(1.05);
 }
 
+.searchButton{
+    position: relative;
+}
+.searchButton p{
+    width: 100px;
+    border: 2px solid var(--current-neon);
+    border-radius: 20px;
+    padding: 5px;
+    margin: 0;
+    /*animation-name: none;*/
+    animation-duration: 15s;
+}
+.searchButton p::before,
+.searchButton p::after {
+    border: 2px solid  var(--current-neon);
+    border-radius: 20px;
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 96px;
+    height: 2.05em;
+    filter: blur(0);
+}
+.searchButton p:hover::before,
+.searchButton p:hover::after{
+    border-color: transparent;
+    filter: blur(2px);
+    transform: scaleX(1.6) scaleY(2);
+    transition: 0.8s transform ease, 2s blur ease, .7s border-color ease;
+}
+.searchButton p:hover::after{
+    transition-delay: 0.2s;
+}
+
 @media (max-width: 600px) {
     header{
         justify-content: space-between;
