@@ -25,6 +25,7 @@ header{
     border-radius: 20px;
     padding: 5px;
     margin: 0;
+    line-height: 20px;
     animation-duration: 15s;
 }
 .searchButton p::before,
@@ -36,7 +37,7 @@ header{
     top: 10px;
     left: 10px;
     width: 96px;
-    height: 2.05em;
+    height: 30px;
     filter: blur(0);
 }
 .searchButton p:hover::before,
