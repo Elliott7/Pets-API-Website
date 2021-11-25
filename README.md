@@ -1,6 +1,6 @@
 # Pets API website
 
-Video
+<img src="https://user-images.githubusercontent.com/32166124/143407796-a16b7b20-78b8-4086-a648-d3384ca2945d.gif" alt="GIF" />
 
 ### Features:
 
