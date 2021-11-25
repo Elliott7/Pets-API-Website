@@ -1,4 +1,6 @@
 export const dogAPI = (updateFunc) => {
+    /*** Fetches dog specific API, parses response and then returns promise of the input function
+     * with the the response as the parameter*/
     fetch("https://dog.ceo/api/breed/shiba/images/random/20")
         .then(response => response.text())
         .then(response => (JSON.parse(response).message))
@@ -22,19 +24,20 @@ export const catAPI = (updateFunc) => {
         .then(response => response.json())
         .then(response => (response.map((item) => arr.push(item.url))))
         .then(() => updateFunc(arr))
-        // .then(updateFunc)
         .catch(error => console.log('error', error));
 }
 
-
-// All current dog & cat facts apis don't have cors enabled APIS - Once node/express is learnt come back
-// and add apis to query facts from server
-// export const dogFactAPI = () => {
-//     fetch("https://dog-api.kinduff.com/api/facts?number=1",{
-//         mode: 'cors',
-//     })
-//         // .then(response => response.json())
-//         .then(response => console.log(response))
-//         .catch(error => console.log('error', error));
-// }
-
+export const otherAPI = (updateFunc) => {
+    const promise = Promise.all([
+        fetch(        'https://some-random-api.ml/animal/birb')
+            .then(res => res.json())
+            .then(res => res.image),
+        fetch(        'https://some-random-api.ml/animal/birb')
+            .then(res => res.json())
+                .then(res => res.image),
+        fetch(        'https://some-random-api.ml/animal/birb')
+            .then(res => res.json())
+            .then(res => res.image),
+    ])
+    promise.then(res => updateFunc(res))
+}

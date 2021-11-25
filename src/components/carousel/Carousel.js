@@ -1,15 +1,15 @@
-import React, {useState} from 'react'
+import React from 'react'
 import style from "./Carousel.module.css"
 import '../shared-properties.css'
 
 function Carousel(props){
-    // const [url, setUrl] = useState('')
     let rotatingImages =
         <div className={`${style.imageContainers} ${style.rotating}`}>
             <img src={props.url}
                  className={`${props.theme.border} `}
                  alt="Changing pictures of animals"/>
         </div>
+
     const displayPictures = props.theme.carouselPictures.map((image) => {
         return(
             <div className={style.imageContainers} key={Math.random()}>

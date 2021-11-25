@@ -17,8 +17,6 @@ function Footer(props){
                      alt={props.theme.logoLocation[3]}
                 />
             </a>
-
-
         </footer>
     )
 }

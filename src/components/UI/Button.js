@@ -3,7 +3,8 @@ import style from './Button.module.css'
 
 
 function Button(props){
-    //Accepts three parameters: type - onClick - className
+    /** Accepts three parameters: type - onClick - className */
+
     return(
         <button
             type={props.type || 'button'}

@@ -2,6 +2,8 @@ import React from 'react'
 import style from "./NeonAnimation.module.css"
 
 function NeonAnimation(props){
+    /** An animation module that takes the wrapped children and makes them appear like a flashing
+     * neon sign*/
     if (!props.children) {
         return null
     }

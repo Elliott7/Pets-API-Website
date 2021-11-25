@@ -32,10 +32,6 @@ function Header(props){
                 <button className={style.searchButton} onClick={props.random}>
                     <p className={`${neonColor} ${(!cat && !dog) || neon.animationOff}`}>Random?</p>
                 </button>
-                {/*<li><a href="#">Option 1</a></li>*/}
-                {/*<li><a href="#">Option3</a></li>*/}
-                {/*<li>Option 4</li>*/}
-                {/*<button onClick={tes}>Option 5</button>*/}
             </NavBar>
         </header>
     )
