@@ -24,7 +24,7 @@ function NeonAnimation(props){
     */
     let splitWords = props.children.split(' ')
     let output = []
-    splitWords.map((word) => {
+    splitWords.forEach((word) => {
         let splitLetters = word.split("")
         let animatedWord = splitLetters.map((letter) => {
             return(
