@@ -72,25 +72,37 @@ export const catData = {
         {
             'src': "/images/cutecat2.jpeg",
             'alt': "Beautiful Ragdoll cat",
-            'desc': "Beautiful Ragdoll Cat"
+            'desc': "Another gorgeous Ragdoll Cat"
         },
         {
             'src': "/images/cutecat3.jpeg",
-            'alt': "Beautiful Ragdoll cat",
-            'desc': "Beautiful Ragdoll Cat"
+            'alt': "Beautiful Ragdoll kitten",
+            'desc': "A cute Ragdoll kitten"
         },
         {
             'src': "/images/cutecat4.jpeg",
             'alt': "Beautiful Ragdoll cat",
-            'desc': "Beautiful Ragdoll Cat"
+            'desc': "A Beautiful Ragdoll Cat"
         },
     ],
 
     "copy": "Copyright Emperor Kitty Pty Ltd",
     "slogan": "Bow down to your overlords",
     "quote": [
-        "meow",
-        "purr"
+        "The technical term for a cat’s hairball is a “bezoar.”",
+        "A group of cats is called a “clowder.”",
+        "Cats make about 100 different sounds. Dogs make only about 10.",
+        "A cat can travel at a top speed of approximately 31 mph (49 km) over a short distance",
+        "A cat rubs against people not only to be affectionate but also to mark out its territory with scent glands " +
+        "around its face. The tail area and paws also carry the cat’s scent.",
+        "Most cats give birth to a litter of between one and nine kittens. The largest known litter ever produced " +
+        "was 19 kittens, of which 15 survived",
+        "Smuggling a cat out of ancient Egypt was punishable by death. Phoenician traders eventually succeeded in " +
+        "smuggling felines, which they sold to rich people in Athens and other important cities.",
+        "Many Egyptians worshipped the goddess Bast, who had a woman’s body and a cat’s head.",
+        "A cat can jump up to five times its own height in a single bound.",
+        "On average, cats spend 2/3 of every day sleeping. That means a nine-year-old cat has been awake for " +
+        "only three years of its life."
     ]
 }
 
@@ -129,8 +141,18 @@ export const birdData = {
     "copy": "Copyright Squawks Inc",
     "slogan": "Squawk",
     "quote": [
-        "chirp",
-        "Squawk",
-        "Hello"
+        "The Sword-billed Hummingbird is the only bird with a bill longer than its body",
+        "Approximately 2/3 of all the bird species are found in tropical rain forests.",
+        "The longest feathers ever seen were on a chicken in Japan. Its tail feathers measured 34.7 feet" +
+        " (10.59 m) long.",
+        "Owls cannot swivel their eyes. Instead they move their heads completely around to see straight behind them",
+        "The most talkative bird in the world is the African gray parrot. One parrot could say over 800 words. " +
+        "Most species of parrots can learn only 50.",
+        "Many birds, such as starlings, sing notes too high for humans to hear",
+        "A green woodpecker can eat as many as 2,000 ants per day.",
+        "A pelican’s pouch-like beak can hold up to 2.5 gallons of water at a time. The beak will shrink to squeeze" +
+        " out the water before the pelican swallows its food",
+        "The heaviest bird of prey is the Andean condor. It can weigh up to 27 lb. (12 kg.).",
+        "The bird with the greatest wingspan of any other bird is the Wandering Albatross at up to 11.8 ft (3.63 m)."
     ]
 }
