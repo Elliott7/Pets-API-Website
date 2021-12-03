@@ -6,14 +6,6 @@ import Button from "../UI/Button";
 
 function Hero(props){
     const clickHandler = (event) => {
-        // if (props.theme.animal === "Doge"){
-        //     props.loadDogPics()
-        // } else if (props.theme.animal === "Kitteh"){
-        //     props.loadCatPics()
-        // }
-        // else {
-        //     props.loadOther()
-        // }
         if (props.theme.animal === "Doge"){
             props.loadPics("Doge")
         } else if (props.theme.animal === "Kitteh"){
