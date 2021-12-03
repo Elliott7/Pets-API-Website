@@ -23,3 +23,9 @@
     transform: scale(1.05);
     opacity: .95;
 }
+
+@media (max-width: 600px) {
+    .main {
+        padding: 0;
+    }
+}
